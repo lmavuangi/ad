@@ -1,0 +1,73 @@
+@layout('layout.version_two')
+
+@section('title')
+Welcome to the best  place to get Food on demand
+@endsection
+
+
+@section('content')
+
+<header class="header-area wrapper-padding-2">
+  <div id="main-menu" class="sticker header-sticky">
+      <div class="container-fluid">
+          <div class="logo-menu-wrapper">
+              <div class="logo-watch navbar-header">
+                  <a class="navbar-brand" href="index.html"><img src="assets/img/logo/logo-6.png" alt=""></a>
+              </div>
+              <div class="hamburger-wrapper">
+                  <div class="hamburger-menu menu-style-toggle text-right" id="main-menu-2">
+                      <nav class="">
+                          <ul>
+                              <li><a href="#home-area">HOME</a></li>
+                              <li><a href="#about-area">ABOUT US</a></li>
+                              <li><a href="#shop-area">shop</a></li>
+                              <li><a href="#features-area">FEATURES</a></li>
+                              <li><a href="#contact-area">CONTACT</a></li>
+                              <li><a href="login.html">Login</a></li>
+                              <li><a href="register.html">Reg</a></li>
+                          </ul>
+                      </nav>
+                      <div class="menu-toggle hamburger hamburger--squeeze">
+                          <div class="hamburger-box">
+                              <div class="hamburger-inner"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="buy-now-btn">
+                          <div class="header-cart">
+                                  <a class="icon-cart" href="#">
+                                      <i class="ti-shopping-cart"></i>
+                                      <span class="shop-count pink">2</span>
+                                  </a>
+                          </div>        
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- header end -->
+<!-- slider start -->
+<div id="home-area" class="height-100vh bg-img watch-slider" style="background-image: url(img/shop20.jpg)">
+  <div class="table">
+      <div class="table-cell">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 align-items-center">
+                      <div class="slider-text">
+                          <h2 class="tlt1">Most <br>intelligent <br>& Smart Watch.</h2>
+                          <div class="button-set">
+                              <a class="explore-btn video-popup" href="https://www.youtube.com/watch?v=K4wEI5zhHB0">
+                                  Explore More <i class="ti-control-play"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+@include('components.common')
+
+@endsection
