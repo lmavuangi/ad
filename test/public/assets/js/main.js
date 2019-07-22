@@ -699,8 +699,8 @@ function display(data)
     sidebar sticky
     --------------------- */
     $('.sidebar-active').stickySidebar({
-        topSpacing: 80,
-        bottomSpacing: 30,
+        topSpacing: 34,
+        bottomSpacing: 180,
         minWidth: 991,
     });
     

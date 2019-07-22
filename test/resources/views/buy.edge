@@ -1,90 +1,210 @@
-@layout('layout.normal')
+@layout('layout.version_one')
 
 @section('title')
     cart
 @endsection
 
 @section('content')
-<div class="electro-product-wrapper wrapper-padding pt-85">
-        <div class="container">
-            <div class="section-title-4 text-center mb-45">
-                <h2>My cart</h2>
-            </div>
-         </div>
-    </div> 
-    <div class="cart-main-area ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h1 class="cart-heading">Cart</h1>
-                    <form action="#">
-                        <div class="table-content table-responsive">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>remove</th>
-                                        <th>Product</th>
-                                        <th>description</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
-                                        <td class="product-thumbnail">
-                                            <a href="#"><img src="assets/img/cart/1.jpg" alt=""></a>
-                                        </td>
-                                        <td class="product-name"><a href="#">Wooden Furniture </a></td>
-                                        <td class="product-price-cart"><span class="amount">$165.00</span></td>
-                                        <td class="product-quantity">
-                                            <input value="1" type="number">
-                                        </td>
-                                        <td class="product-subtotal">$165.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
-                                        <td class="product-thumbnail">
-                                            <a href="#"><img src="assets/img/cart/2.jpg" alt=""></a>
-                                        </td>
-                                        <td class="product-name"><a href="#">Vestibulum dictum</a></td>
-                                        <td class="product-price-cart"><span class="amount">$150.00</span></td>
-                                        <td class="product-quantity">
-                                            <input value="1" type="number">
-                                        </td>
-                                        <td class="product-subtotal">$150.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
-                                        <td class="product-thumbnail">
-                                            <a href="#"><img src="assets/img/cart/3.jpg" alt=""></a>
-                                        </td>
-                                        <td class="product-name"><a href="#">Vestibulum dictum</a></td>
-                                        <td class="product-price-cart"><span class="amount">$150.00</span></td>
-                                        <td class="product-quantity">
-                                            <input value="1" type="number">
-                                        </td>
-                                        <td class="product-subtotal">$150.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
 
-                        <div class="row"  >
-                            <div class="col-md-12 ">
-                                <div class="cart-page-total">
-                                    <h2>Cart totals</h2>
-                                    <ul>
-                                        <li>Subtotal<span>100.00</span></li>
-                                    </ul>
-                                    <a class="button" style="float:right;" href="#">Proceed to checkout</a>
+
+<header>
+    <div class="header-area" >
+            @include('components.headSection')
+
+
+        <div class="header-right-sidebar">
+                @include('components.cartSection')
+                <!--the section goes here-->
+                <div class="electro-product-wrapper wrapper-padding pt-85 pb-75">
+                        <div class="container">
+                            <div class="section-title-4 text-center mb-45">
+                                <h2>Buy</h2>
+                            </div>
+                         </div>
+                    </div> 
+                    <!-- checkout-area start -->
+                    <div class="checkout-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="coupon-accordion">
+                                        <!-- ACCORDION START -->
+                                        <h3>Returning customer? <span id="showlogin">Click here to login</span></h3>
+                                        <div id="checkout-login" class="coupon-content">
+                                            <div class="coupon-info">
+                                                <p class="coupon-text">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
+                                                <form action="#">
+                                                    <p class="form-row-first">
+                                                        <label>Username or email <span class="required">*</span></label>
+                                                        <input type="text" />
+                                                    </p>
+                                                    <p class="form-row-last">
+                                                        <label>Password  <span class="required">*</span></label>
+                                                        <input type="text" />
+                                                    </p>
+                                                    <p class="form-row">					
+                                                        <input type="submit" value="Login" />
+                                                        <label>
+                                                            <input type="checkbox" />
+                                                             Remember me 
+                                                        </label>
+                                                    </p>
+                                                    <p class="lost-password">
+                                                        <a href="#">Lost your password?</a>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- ACCORDION END -->	
+                                        <!-- ACCORDION START -->
+                                        <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
+                                        <div id="checkout_coupon" class="coupon-checkout-content">
+                                            <div class="coupon-info">
+                                                <form action="#">
+                                                    <p class="checkout-coupon">
+                                                        <input type="text" placeholder="Coupon code" />
+                                                        <input type="submit" value="Apply Coupon" />
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- ACCORDION END -->						
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-12">
+                                    <form action="#">
+                                        <div class="checkbox-form">						
+                                            <h3>Billing Details</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="checkout-form-list">
+                                                        <label>First Name <span class="required">*</span></label>										
+                                                        <input type="text" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="checkout-form-list">
+                                                        <label>Last Name <span class="required">*</span></label>										
+                                                        <input type="text" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkout-form-list">
+                                                        <label>Address <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Street address" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkout-form-list">									
+                                                        <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="checkout-form-list">
+                                                        <label>Postcode / Zip <span class="required">*</span></label>										
+                                                        <input type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="checkout-form-list">
+                                                        <label>Email Address <span class="required">*</span></label>										
+                                                        <input type="email" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="checkout-form-list">
+                                                        <label>Phone  <span class="required">*</span></label>										
+                                                        <input type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkout-form-list create-acc">	
+                                                        <input id="cbox" type="checkbox" />
+                                                        <label>Create an account?</label>
+                                                    </div>
+                                                    <div id="cbox_info" class="checkout-form-list create-account">
+                                                        <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                                                        <label>Account password  <span class="required">*</span></label>
+                                                        <input type="password" placeholder="password" />	
+                                                    </div>
+                                                </div>								
+                                            </div>												
+                                        </div>
+                                    </form>
+                                </div>	
+                                <div class="col-lg-6 col-md-12 col-12">
+                                    <div class="your-order">
+                                        <h3>Your order</h3>
+                                        <div class="your-order-table table-responsive">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="product-name">Product</th>
+                                                        <th class="product-total">Total</th>
+                                                    </tr>							
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="cart_item">
+                                                        <td class="product-name">
+                                                            Vestibulum suscipit <strong class="product-quantity"> × 1</strong>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            <span class="amount">£165.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="cart_item">
+                                                        <td class="product-name">
+                                                            Vestibulum dictum magna	<strong class="product-quantity"> × 1</strong>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            <span class="amount">£50.00</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr class="cart-subtotal">
+                                                        <th>Cart Subtotal</th>
+                                                        <td><span class="amount">£215.00</span></td>
+                                                    </tr>
+                                                    <tr class="order-total">
+                                                        <th>Order Total</th>
+                                                        <td><strong><span class="amount">£215.00</span></strong>
+                                                        </td>
+                                                    </tr>								
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                        <div class="payment-method">
+                                            <div class="payment-accordion">
+                                                <div class="panel-group" id="faq">
+                                                    <div class="panel panel-default">
+                                                    </div>
+                
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h5 class="panel-title"><a class="collapsed" data-toggle="collapse" aria-expanded="false" data-parent="#faq" href="#payment-3">PayPal</a></h5>
+                                                        </div>
+                                                        <div id="payment-3" class="panel-collapse collapse">
+                                                            <div class="panel-body">
+                                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-button-payment">
+                                                    <input type="submit" value="Place order" />
+                                                </div>								
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
+                    </div>
         </div>
+  
     </div>
+</header>
 @endsection

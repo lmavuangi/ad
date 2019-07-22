@@ -17,7 +17,7 @@
 const Route = use('Route')
 
 Route.get('/','ProductController.getProduct')
-//not needed anymore
+
 //Route.get('/two','ProductController.homeTwo')
 //Route.get('/three','ProductController.homeThree')
 
@@ -27,12 +27,13 @@ Route.get('/account','ProductController.account')
 Route.get('/cart','ProductController.cart')
 
 
-Route.get('/test','ProductController.test')
+Route.get('/test','ProductController.home')
 Route.get('/test/:id','ProductController.pick')
 
 
 Route.get('/contact','ProductController.contact')
 Route.get('/login','ProductController.login')
+Route.get('/reg','ProductController.reg')
 Route.get('/shop','ProductController.shop')
 
 

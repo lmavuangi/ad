@@ -2,6 +2,8 @@
 
 const Prod = use('App/Models/Product')
 
+const Product = use('App/Models/Product')
+
 class ProductController {
 
 
@@ -13,7 +15,37 @@ class ProductController {
     cart({view}){ return  view.render('cart'); }
     contact({view}){ return  view.render('contact'); }
     login({view}){ return  view.render('login'); }
-    shop({view}){ return  view.render('shop'); }
+    reg({view}){ return  view.render('reg'); }
+
+    
+
+    async home({view})
+    {
+        const product = new Product;
+        product.name = 'chips';
+        product.img = 'candy6.jpg';
+        product.desc = 'plastic chips 9.75oz';
+        product.sell = true;
+        product.price = 1.45;
+
+        await product.save();
+
+        const products = await Product.all();
+
+        return {products:products.toJSON()};
+    }
+    
+    shop({view}){
+        
+        const prod = new Prod;
+
+        let products = prod.prod();
+
+        let display = prod.getdis();
+
+        return view.render('shop', {products, display });
+    
+    }
     
     test()
     {

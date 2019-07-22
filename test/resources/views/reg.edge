@@ -1,0 +1,59 @@
+@layout('layout.version_one')
+
+@section('title')
+    Register
+@endsection
+
+@section('content')
+
+
+<header>
+    <div class="header-area" >
+            @include('components.headSection')
+
+
+        <div class="header-right-sidebar">
+                @include('components.cartSection')
+                <!--the section goes here-->
+                <div class="electro-product-wrapper wrapper-padding pt-85 ">
+                        <div class="container">
+                            <div class="section-title-4 text-center mb-45">
+                                <h2>Register</h2>
+                            </div>
+                         </div>
+                    </div> 
+                
+                                    <!-- register-area start -->
+                        <div class="register-area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 col-12 col-lg-12 col-xl-6 ml-auto mr-auto">
+                                        <div class="login">
+                                            <div class="login-form-container">
+                                                <div class="login-form">
+                                                    <form action="#" method="post">
+                                                        <input type="text" name="user-name" placeholder="Username">
+                                                        <input type="password" name="user-password" placeholder="Password">
+                                                        <input name="user-email" placeholder="Email" type="email">
+                                                        <div class="button-box">
+                                                            <button type="submit" class="default-btn floatright">Register</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+  
+    </div>
+</header>
+@endsection
+
+
+
+
+
