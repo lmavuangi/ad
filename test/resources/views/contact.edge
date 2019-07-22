@@ -1,0 +1,67 @@
+@layout('layout.normal')
+
+@section('title')
+    contact
+@endsection
+
+@section('content')
+<div class="electro-product-wrapper wrapper-padding pt-85 pb-75">
+        <div class="container">
+            <div class="section-title-4 text-center mb-45">
+                <h2>Contact us</h2>
+            </div>
+         </div>
+    </div> 
+        <!-- shopping-cart-area start -->
+            <div class="container" >
+                <div class="row"  >
+                    <div class="col-lg-8">
+                        <div class="contact-map-wrapper">
+                            <div class="contact-message">
+                                <div class="contact-title">
+                                    <h4>Contact Information</h4>
+                                </div>
+                                <form id="contact-form" class="contact-form" action="assets/mail.php" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="contact-input-style mb-30">
+                                                <label>Name*</label>
+                                                <input name="name" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="contact-input-style mb-30">
+                                                <label>Email*</label>
+                                                <input name="email" required="" type="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="contact-input-style mb-30">
+                                                <label>Telephone</label>
+                                                <input name="telephone" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="contact-input-style mb-30">
+                                                <label>subject</label>
+                                                <input name="subject" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="contact-textarea-style mb-30">
+                                                <label>Comment*</label>
+                                                <textarea class="form-control2" name="message" required=""></textarea>
+                                            </div>
+                                            <button class="submit contact-btn btn-hover" type="submit">
+                                                Send Message 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p class="form-messege"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@endsection

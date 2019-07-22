@@ -1,397 +1,86 @@
 'use strict'
 
+const Prod = use('App/Models/Product')
 
 class ProductController {
 
 
-    getProduct({view})
+
+
+    account({view}){ return  view.render('account'); }
+    about({view}){ return  view.render('about'); }
+    buy({view}){ return  view.render('buy'); }
+    cart({view}){ return  view.render('cart'); }
+    contact({view}){ return  view.render('contact'); }
+    login({view}){ return  view.render('login'); }
+    shop({view}){ return  view.render('shop'); }
+    
+    test()
     {
 
-        let display = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'home2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'water.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home6.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: null
-            }]
+        const prod = new Prod;
 
+        let candy = prod.candy();
 
-        let products = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'chips2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips4.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips3.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null 
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: 'SELL'
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              
-          ];
+         return  candy; 
+    }
 
-        return view.render('welcomeone', {products, display });
+    pick(params)
+    {
+
+        const prod = new Prod;
+        let candy;
+
+           /* switch(params)
+            {
+            case 1:
+                candy = prod.candy();
+                break;
+            case 2:
+                candy = prod.drinks();
+                break;
+            case 3:
+                candy =  prod.prod();
+                break;
+            case 4:
+                candy = prod.candy();
+                break;
+            case 5:
+                candy = prod.prod();
+                break;
+            case 6:
+                candy = prod.drinks();
+                break;
+            default:
+                candy = prod.drinks();
+                break;
+            }*/
+
+            candy = typeof params;
+
+         return candy; 
+    }
+
+    getProduct({view})
+    {
+        const prod = new Prod;
+
+        let products = prod.prod();
+
+        let display = prod.getdis();
+
+        return view.render('welcome', {products, display });
     } 
     
     
     homeTwo({view})
     {
 
-        let display = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'home2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'water.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home6.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: null
-            }]
+        const prod = new Prod;
 
+        let products = prod.prod();
 
-        let products = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'chips2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips4.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips3.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null 
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: 'SELL'
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              
-          ];
-
+        let display = prod.getdis();
         return view.render('welcometwo', {products, display });
     } 
 
@@ -400,195 +89,12 @@ class ProductController {
     
     homeThree({view})
     {
+ 
+          const prod = new Prod;
 
-        let display = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'home2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'water.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'home6.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'bars.jpg',
-                sell: null
-            }]
+          let products = prod.prod();
 
-
-        let products = [
-            {
-              name: "chair",
-              inventory: 5,
-              price: 45.99,
-              img: 'chips2.jpg',
-              sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips5.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips4.jpg',
-                sell: 'SELL'
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips3.jpg',
-                sell: null
-            },
-            {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null 
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips4.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips3.jpg',
-                  sell: null
-              },
-              {
-                name: "chair",
-                inventory: 5,
-                price: 45.99,
-                img: 'chips2.jpg',
-                sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips5.jpg',
-                  sell: 'SELL'
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              {
-                  name: "chair",
-                  inventory: 5,
-                  price: 45.99,
-                  img: 'chips2.jpg',
-                  sell: null
-              },
-              
-          ];
+          let display = prod.getdis();
 
         return view.render('welcomethree', {products, display });
     } 

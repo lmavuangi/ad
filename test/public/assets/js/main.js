@@ -1,3 +1,120 @@
+/*============================================================
+|U/I  events 
+|*============================================================*/
+
+/**
+
+document.getElementById("home").addEventListener('click',getProduct);
+document.getElementById("bathroom").addEventListener('click',getProduct);
+document.getElementById("candies").addEventListener('click',getProduct);
+document.getElementById("elec").addEventListener('click',getProduct);
+document.getElementById("drinks").addEventListener('click',getProduct);
+document.getElementById("chips").addEventListener('click',getProduct);
+
+/*
+
+function getProduct(e)
+{
+    e.preventDefault();
+    let type;
+
+    let id = this.id;
+
+    switch(id)
+    {
+        case "home":
+            type = 1;
+            break;
+        case "drinks":
+            type = 2;
+            break;
+        case "chips":
+            type = 3;
+            break;
+        case "elec":
+            type = 4;
+            break;
+        case "candies":
+            type = 5;
+            break;
+        case "bathroom":
+            type = 6;
+            break;
+        default:
+            type = 7;
+            break;
+
+
+    }
+    display(type);
+   // console.log("the type is " + type + id );
+}
+
+function display(data)
+{
+
+    fetch('http://localhost:3000/test/'+ data)
+    .then((res) => res.json())
+    .then((data) => {
+
+        let onSell;
+        let products = "";
+
+        let arr = [{age:"dfg"},{age:"fg"}];       
+  
+       data.forEach((prod) => {
+
+        onSell = (prod.sell !== null)? `<span class="sell">${prod.sell}</span>` :"";
+ 
+               products +=
+                `
+                <div class="custom-col-two-5 custom-col-style-4">
+                <div class="product-wrapper mb-65">
+                    <div class="product-img-hanicraft">
+                        <a href="#">
+                                <img src="products/${prod.img}" alt="">
+                        </a>
+                            ${onSell}
+                        <div class="hanicraft-action-position">
+                            <div class="hanicraft-action">
+                                <a class="action-cart" title="Add To Cart" href="#">
+                                    <i class="pe-7s-cart"></i>
+                                </a>
+                                <a class="action-like" title="Wishlist" href="#">
+                                    <i class="pe-7s-like"></i>
+                                </a>
+                                <a class="action-repeat" title="Compare" href="#" data-toggle="modal" data-target="#exampleCompare" >
+                                    <i class="pe-7s-repeat"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-hanicraft shop-center">
+                              <h5 style="color:brown;" >$ ${prod.price}</h5>
+                              
+                          <span>${prod.name}</span>
+                            <button data-name="Orange" data-price="0.5"  class="add-to-cart btn shop-btn" style="margin-top:15px; width:100%; border-radius: 5px; " >ADD</button>
+    
+                    </div>
+                </div>
+            </div>
+                
+                `;
+
+                console.log(" worked " + prod.img );
+        })
+
+       // document.getElementById("root").innerHTML = //products;
+
+
+        //console.log(" worked " + price );
+    })
+    .catch(error => console.log("something went wrong bro  " + error))
+    
+}*/
+
+
+
 (function($) {
     "use strict";
     

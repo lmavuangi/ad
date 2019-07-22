@@ -17,15 +17,23 @@
 const Route = use('Route')
 
 Route.get('/','ProductController.getProduct')
-Route.get('/two','ProductController.homeTwo')
-Route.get('/three','ProductController.homeThree')
-Route.on('/check-out').render('welcome')
-Route.on('/cart').render('welcome')
-Route.on('/contact').render('welcome')
-Route.on('/login').render('welcome')
-Route.on('/register').render('welcome')
-Route.on('/restpassword').render('welcome')
-Route.on('/shop').render('welcome')
-Route.on('/account').render('welcome')
+//not needed anymore
+//Route.get('/two','ProductController.homeTwo')
+//Route.get('/three','ProductController.homeThree')
+
+Route.get('/buy','ProductController.buy')
+Route.get('/about','ProductController.about')
+Route.get('/account','ProductController.account')
+Route.get('/cart','ProductController.cart')
+
+
+Route.get('/test','ProductController.test')
+Route.get('/test/:id','ProductController.pick')
+
+
+Route.get('/contact','ProductController.contact')
+Route.get('/login','ProductController.login')
+Route.get('/shop','ProductController.shop')
+
 
 

@@ -1,0 +1,90 @@
+@layout('layout.normal')
+
+@section('title')
+    cart
+@endsection
+
+@section('content')
+<div class="electro-product-wrapper wrapper-padding pt-85">
+        <div class="container">
+            <div class="section-title-4 text-center mb-45">
+                <h2>My cart</h2>
+            </div>
+         </div>
+    </div> 
+    <div class="cart-main-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1 class="cart-heading">Cart</h1>
+                    <form action="#">
+                        <div class="table-content table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>remove</th>
+                                        <th>Product</th>
+                                        <th>description</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
+                                        <td class="product-thumbnail">
+                                            <a href="#"><img src="assets/img/cart/1.jpg" alt=""></a>
+                                        </td>
+                                        <td class="product-name"><a href="#">Wooden Furniture </a></td>
+                                        <td class="product-price-cart"><span class="amount">$165.00</span></td>
+                                        <td class="product-quantity">
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="product-subtotal">$165.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
+                                        <td class="product-thumbnail">
+                                            <a href="#"><img src="assets/img/cart/2.jpg" alt=""></a>
+                                        </td>
+                                        <td class="product-name"><a href="#">Vestibulum dictum</a></td>
+                                        <td class="product-price-cart"><span class="amount">$150.00</span></td>
+                                        <td class="product-quantity">
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="product-subtotal">$150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-remove"><a href="#"><i class="pe-7s-close"></i></a></td>
+                                        <td class="product-thumbnail">
+                                            <a href="#"><img src="assets/img/cart/3.jpg" alt=""></a>
+                                        </td>
+                                        <td class="product-name"><a href="#">Vestibulum dictum</a></td>
+                                        <td class="product-price-cart"><span class="amount">$150.00</span></td>
+                                        <td class="product-quantity">
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="product-subtotal">$150.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row"  >
+                            <div class="col-md-12 ">
+                                <div class="cart-page-total">
+                                    <h2>Cart totals</h2>
+                                    <ul>
+                                        <li>Subtotal<span>100.00</span></li>
+                                    </ul>
+                                    <a class="button" style="float:right;" href="#">Proceed to checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
