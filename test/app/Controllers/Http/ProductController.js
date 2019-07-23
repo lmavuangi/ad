@@ -19,20 +19,10 @@ class ProductController {
 
     
 
-    async home({view})
+    home({view})
     {
-        const product = new Product;
-        /*product.name = 'chips and cookies';
-        product.img = 'candy6.jpg';
-        product.desc = 'plastic chips 9.75oz';
-        product.sell = true;
-        product.price = 1.45;
 
-        await product.save();*/
-
-        const products = await Product.all();
-
-        return view.render('test',{products:products.toJSON() });
+        return 5;
     }
     
     shop({view}){
