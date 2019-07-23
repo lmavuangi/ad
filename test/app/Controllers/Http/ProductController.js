@@ -95,13 +95,13 @@ class ProductController {
 
     getProduct({view})
     {
-        const prod = new Prod;
+        //const prod = new Prod;
 
-        let products = prod.prod();
+        //let products = prod.prod();
 
-        let display = prod.getdis();
+        //let display = prod.getdis();
 
-        return view.render('welcome', {products, display });
+        return view.render('welcome');
     } 
     
     
