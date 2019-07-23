@@ -22,17 +22,17 @@ class ProductController {
     async home({view})
     {
         const product = new Product;
-        product.name = 'chips';
+        /*product.name = 'chips and cookies';
         product.img = 'candy6.jpg';
         product.desc = 'plastic chips 9.75oz';
         product.sell = true;
         product.price = 1.45;
 
-        await product.save();
+        await product.save();*/
 
         const products = await Product.all();
 
-        return {products:products.toJSON()};
+        return view.render('test',{products:products.toJSON() });
     }
     
     shop({view}){
